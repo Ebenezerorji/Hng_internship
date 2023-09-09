@@ -7,16 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
-});
+    
 
+});
 function updateClock() {
     const clockElement = document.getElementById('clock');
-    const currentdate = new Date();
-    const timeString = currentdate.toLocaleTimeString(); 
+    const currentDate = new Date();
+    const timeString = currentDate.toLocaleTimeString() + '.' + currentDate.getMilliseconds().toString().padStart(3, '0'); 
     clockElement.textContent = timeString; // Update the content of the clock element
 }
 
 
 updateClock();
-setInterval(updateClock, 1000);
+setInterval(updateClock, 100);
 
