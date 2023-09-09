@@ -7,13 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
-    
-
 });
+
 function updateClock() {
     const clockElement = document.getElementById('clock');
-    const currentDate = new Date();
-    const timeString = currentDate.toLocaleTimeString(); 
+    const currentdate = new Date();
+    const timeString = currentdate.toLocaleTimeString(); 
     clockElement.textContent = timeString; // Update the content of the clock element
 }
 
