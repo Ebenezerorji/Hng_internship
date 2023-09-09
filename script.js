@@ -18,7 +18,7 @@ function updateClock() {
     const seconds = currentDate.getSeconds().toString().padStart(2, '0');
     const milliseconds = currentDate.getMilliseconds().toString().padStart(3, '0');
     
-    const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+    const timeString = `${hours}${minutes}${seconds}${milliseconds}`;
     clockElement.textContent = timeString;
 }
 
