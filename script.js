@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+    // Get the current date and time
     const currentDate = new Date();
-   
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesdßay', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    // Get the day of the week
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
     const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
     
+    // Display the current day of the week
     const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
+
     
 
 });
@@ -26,3 +30,4 @@ function updateClock() {
 // Update the clock immediately and then every millisecond (1 millisecond)
 updateClock();
 setInterval(updateClock, 1);
+
