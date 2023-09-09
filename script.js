@@ -6,7 +6,7 @@ function updateUTCTime() {
     const seconds = currentDate.getUTCSeconds().toString().padStart(2, '0');
     const milliseconds = currentDate.getUTCMilliseconds().toString().padStart(3, '0');
 
-    const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+    const timeString = `${hours}${minutes}${seconds}${milliseconds}`;
     timeElement.textContent = timeString;
 }
 
