@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function updateClock() {
     const clockElement = document.getElementById('clock');
-    const currentDate = new Date();
-    const timeString = currentDate.toLocaleTimeString() + '.' + currentDate.getMilliseconds().toString().padStart(3, '0'); 
+    const currentdate = new Date();
+    const timeString = currentdate.toLocaleTimeString() + '.' + currentDate.getMilliseconds().toString().padStart(3, '0'); 
     clockElement.textContent = timeString; // Update the content of the clock element
 }
 
