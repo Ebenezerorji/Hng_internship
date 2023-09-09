@@ -11,7 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
     const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
     utcTimeElement.textContent = `Current UTC Time: ${currentDate.toISOString()}`;
 
-    var today = new Date('[data-testid="currentUTCTime"]');
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
 });
