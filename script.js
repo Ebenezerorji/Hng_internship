@@ -1,29 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
+function updateUTCTime() {
+    const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
     const currentDate = new Date();
-   
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
-    
-    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-    dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
-});
+    const hours = currentDate.getUTCHours().toString().padStart(2, '0');
+    const minutes = currentDate.getUTCMinutes().toString().padStart(2, '0');
+    const seconds = currentDate.getUTCSeconds().toString().padStart(2, '0');
+    const milliseconds = currentDate.getUTCMilliseconds().toString().padStart(3, '0');
 
-
-function updateClock() {
-    const clockElement = document.getElementById('currentUTCTime');
-    const currentDate = new Date();
-    const hours = currentDate.getHours().toString().padStart(2, '0'); // Get hours in 24-hour format
-    const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-    const seconds = currentDate.getSeconds().toString().padStart(2, '0');
-    const milliseconds = currentDate.getMilliseconds().toString().padStart(3, '0');
-    
-    const timeString = `${hours}${minutes}${seconds}${milliseconds}`;
-    clockElement.textContent = timeString;
+    const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
+    timeElement.textContent = timeString;
 }
 
-// Update the clock immediately and then every millisecond (1 millisecond)
-updateClock();
-setInterval(updateClock, 1);
-
-
+// Update the UTC time immediately and then every millisecond (1 millisecond)
+updateUTCTime();
+setInterval(updateUTCTime, 1);
