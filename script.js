@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current date and time
+    const currentDate = new Date();
+    
+    // Get the day of the week
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+    
+    // Display the current day of the week
+    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
 function updateUTCTime() {
     const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
     const currentDate = new Date();
