@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
     
 
-
 });
 function updateClock() {
     const clockElement = document.getElementById('clock');
