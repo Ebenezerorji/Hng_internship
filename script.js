@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function updateClock() {
-    const clockElement = document.getElementById('clock');
+    const clockElement = document.getElementById('currentUTCTime');
     const currentDate = new Date();
     const hours = currentDate.getHours().toString().padStart(2, '0'); // Get hours in 24-hour format
     const minutes = currentDate.getMinutes().toString().padStart(2, '0');
